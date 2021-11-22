@@ -1,0 +1,3 @@
+DB_CONNECTION=CONNECTION_TO_DB
+TESTING=booll_to_testing_mode
+SECRET_KEY=Flask_Secrety_key
