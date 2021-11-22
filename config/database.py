@@ -10,6 +10,6 @@ SQLALCHEMY_DATABASE_URI = os.getenv('DB_CONNECTION')
 
 engine = create_engine(SQLALCHEMY_DATABASE_URI, connect_args={"check_same_thread": False})
 
-seasson_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+session_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
