@@ -12,17 +12,17 @@
 <body>
     
 
-        <div class="container-md">
+        <div class="container">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Gerenciador de Recursos</span>
                 <div>
-                    <a class="navbar-brand" href="#">Login</a>
-                    <a class="navbar-brand" href="#">Sing In</a>
+                    <a class="navbar-brand" href="{{ url_for('login')}}">Login</a>
+                    <a class="navbar-brand" href="{{ url_for('signup')}}">Sign Up</a>
                 </div>
                 </div>
             </nav>
-            <div class="container-md">
+            <div class="container-sm" style="width: 500px;">
                 {% block content %}
                 {% endblock %}
             </div>

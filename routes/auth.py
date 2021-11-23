@@ -8,7 +8,7 @@ def login():
 
 @app.route('/signup')
 def signup():
-    return 'Signup'
+    return render_template('signup.html')
 
 @app.route('/logout')
 def logout():
