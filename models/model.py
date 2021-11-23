@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.sql.expression import true
+from sqlalchemy import Column, Integer, String, Boolean
 from config.database import Base
 
 class Resource(Base):
@@ -15,3 +14,9 @@ class User(Base):
     password = Column(String(256), nullable=True, unique=False)
     email = Column(String(150), nullable=False, unique=True)
     role = Column(String(150), nullable=True, unique=False)
+    is_authenticated = Column(Boolean(), default=False)
+    is_active = Column(Boolean(), default=True)
+    is_anonymous = Column(Boolean(), default=False)
+
+    def get_id(self):
+        return self.id
