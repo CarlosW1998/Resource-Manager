@@ -15,6 +15,7 @@ def signup():
 
 @app.route('/register_user', methods=['POST'])
 def register():
+    print(request.form)
     form = SignUpFromValidator(request.form)
     if request.method == 'POST' and form.validate():
         return 'Life is great you know'
