@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy, _app_ctx_stack
 from sqlalchemy.orm import backref, scoped_session
@@ -5,8 +7,6 @@ import os
 from config.database import engine, session_local
 from models.model import Base
 from distutils.util import strtobool
-from dotenv import load_dotenv
-load_dotenv()
 
 Base.metadata.create_all(bind=engine)
 
